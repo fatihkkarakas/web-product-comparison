@@ -1,0 +1,6 @@
+C:\Users\LENOVO\source\repos\wep.proje\Proje.Business\bin\Debug\Proje.Business.dll
+C:\Users\LENOVO\source\repos\wep.proje\Proje.Business\bin\Debug\Proje.Business.pdb
+C:\Users\LENOVO\source\repos\wep.proje\Proje.Business\obj\Debug\Proje.Business.csprojAssemblyReference.cache
+C:\Users\LENOVO\source\repos\wep.proje\Proje.Business\obj\Debug\Proje.Business.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\wep.proje\Proje.Business\obj\Debug\Proje.Business.dll
+C:\Users\LENOVO\source\repos\wep.proje\Proje.Business\obj\Debug\Proje.Business.pdb

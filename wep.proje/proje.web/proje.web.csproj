@@ -1,0 +1,336 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EBEE6506-BA4F-41F4-BF2C-7611D07AE402}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>proje.web</RootNamespace>
+    <AssemblyName>proje.web</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44349</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="Default.aspx" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Tasarım\css\style.css" />
+    <Content Include="Tasarım\documentation\documentation.html" />
+    <Content Include="Tasarım\gulpfile.js" />
+    <Content Include="Tasarım\images\auth\lockscreen-bg.jpg" />
+    <Content Include="Tasarım\images\auth\login-bg.jpg" />
+    <Content Include="Tasarım\images\auth\register-bg.jpg" />
+    <Content Include="Tasarım\images\dashboard\shape-1.svg" />
+    <Content Include="Tasarım\images\dashboard\shape-2.svg" />
+    <Content Include="Tasarım\images\dashboard\shape-3.svg" />
+    <Content Include="Tasarım\images\dashboard\shape-4.svg" />
+    <Content Include="Tasarım\images\faces\face1.jpg" />
+    <Content Include="Tasarım\images\faces\face10.jpg" />
+    <Content Include="Tasarım\images\faces\face11.jpg" />
+    <Content Include="Tasarım\images\faces\face12.jpg" />
+    <Content Include="Tasarım\images\faces\face13.jpg" />
+    <Content Include="Tasarım\images\faces\face14.jpg" />
+    <Content Include="Tasarım\images\faces\face15.jpg" />
+    <Content Include="Tasarım\images\faces\face16.jpg" />
+    <Content Include="Tasarım\images\faces\face17.jpg" />
+    <Content Include="Tasarım\images\faces\face18.jpg" />
+    <Content Include="Tasarım\images\faces\face19.jpg" />
+    <Content Include="Tasarım\images\faces\face2.jpg" />
+    <Content Include="Tasarım\images\faces\face20.jpg" />
+    <Content Include="Tasarım\images\faces\face21.jpg" />
+    <Content Include="Tasarım\images\faces\face22.jpg" />
+    <Content Include="Tasarım\images\faces\face23.jpg" />
+    <Content Include="Tasarım\images\faces\face24.jpg" />
+    <Content Include="Tasarım\images\faces\face25.jpg" />
+    <Content Include="Tasarım\images\faces\face26.jpg" />
+    <Content Include="Tasarım\images\faces\face27.jpg" />
+    <Content Include="Tasarım\images\faces\face28.jpg" />
+    <Content Include="Tasarım\images\faces\face3.jpg" />
+    <Content Include="Tasarım\images\faces\face4.jpg" />
+    <Content Include="Tasarım\images\faces\face5.jpg" />
+    <Content Include="Tasarım\images\faces\face6.jpg" />
+    <Content Include="Tasarım\images\faces\face7.jpg" />
+    <Content Include="Tasarım\images\faces\face8.jpg" />
+    <Content Include="Tasarım\images\faces\face9.jpg" />
+    <Content Include="Tasarım\images\favicon.png" />
+    <Content Include="Tasarım\images\logo-mini.svg" />
+    <Content Include="Tasarım\images\logo.svg" />
+    <Content Include="Tasarım\index.html" />
+    <Content Include="Tasarım\js\chart.js" />
+    <Content Include="Tasarım\js\dashboard.js" />
+    <Content Include="Tasarım\js\documentation.js" />
+    <Content Include="Tasarım\js\file-upload.js" />
+    <Content Include="Tasarım\js\hoverable-collapse.js" />
+    <Content Include="Tasarım\js\off-canvas.js" />
+    <Content Include="Tasarım\js\tabs.js" />
+    <Content Include="Tasarım\js\template.js" />
+    <Content Include="Tasarım\js\todolist.js" />
+    <Content Include="Tasarım\js\tooltips.js" />
+    <Content Include="Tasarım\pages\charts\chartjs.html" />
+    <Content Include="Tasarım\pages\forms\basic_elements.html" />
+    <Content Include="Tasarım\pages\icons\themify.html" />
+    <Content Include="Tasarım\pages\samples\lock-screen.html" />
+    <Content Include="Tasarım\pages\samples\login-2.html" />
+    <Content Include="Tasarım\pages\samples\login.html" />
+    <Content Include="Tasarım\pages\samples\register-2.html" />
+    <Content Include="Tasarım\pages\samples\register.html" />
+    <Content Include="Tasarım\pages\tables\basic-table.html" />
+    <Content Include="Tasarım\pages\ui-features\buttons.html" />
+    <Content Include="Tasarım\pages\ui-features\typography.html" />
+    <Content Include="Tasarım\partials\_footer.html" />
+    <Content Include="Tasarım\partials\_navbar.html" />
+    <Content Include="Tasarım\partials\_sidebar.html" />
+    <Content Include="Tasarım\preview.png" />
+    <Content Include="Tasarım\vendors\base\vendor.bundle.base.css" />
+    <Content Include="Tasarım\vendors\base\vendor.bundle.base.js" />
+    <Content Include="Tasarım\vendors\chart.js\Chart.min.js" />
+    <Content Include="Tasarım\vendors\ti-icons\css\themify-icons.css" />
+    <Content Include="Tasarım\vendors\ti-icons\fonts\themify.svg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="Tasarım\.DS_Store" />
+    <Content Include="Tasarım\.gitignore" />
+    <Content Include="Tasarım\CHANGELOG.md" />
+    <Content Include="Tasarım\css\.DS_Store" />
+    <Content Include="Tasarım\css\maps\style.css.map" />
+    <Content Include="Tasarım\documentation\.DS_Store" />
+    <Content Include="Tasarım\fonts\.DS_Store" />
+    <Content Include="Tasarım\fonts\Roboto\.DS_Store" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Black.eot" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Black.ttf" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Black.woff" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Black.woff2" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Bold.eot" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Bold.ttf" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Bold.woff" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Bold.woff2" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Light.eot" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Light.ttf" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Light.woff" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Light.woff2" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Medium.eot" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Medium.ttf" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Medium.woff" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Medium.woff2" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Regular.eot" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Regular.ttf" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Regular.woff" />
+    <Content Include="Tasarım\fonts\Roboto\Roboto-Regular.woff2" />
+    <Content Include="Tasarım\images\.DS_Store" />
+    <Content Include="Tasarım\images\auth\.DS_Store" />
+    <Content Include="Tasarım\images\faces\.DS_Store" />
+    <Content Include="Tasarım\js\.DS_Store" />
+    <Content Include="Tasarım\LICENSE.md" />
+    <Content Include="Tasarım\package.json" />
+    <Content Include="Tasarım\pages\.DS_Store" />
+    <Content Include="Tasarım\pages\charts\.DS_Store" />
+    <Content Include="Tasarım\pages\forms\.DS_Store" />
+    <Content Include="Tasarım\pages\icons\.DS_Store" />
+    <Content Include="Tasarım\pages\samples\.DS_Store" />
+    <Content Include="Tasarım\pages\tables\.DS_Store" />
+    <Content Include="Tasarım\pages\ui-features\.DS_Store" />
+    <Content Include="Tasarım\partials\.DS_Store" />
+    <Content Include="Tasarım\README.md" />
+    <Content Include="Tasarım\scss\.DS_Store" />
+    <Content Include="Tasarım\scss\components\.DS_Store" />
+    <Content Include="Tasarım\scss\components\_badges.scss" />
+    <Content Include="Tasarım\scss\components\_bootstrap-progress.scss" />
+    <Content Include="Tasarım\scss\components\_buttons.scss" />
+    <Content Include="Tasarım\scss\components\_cards.scss" />
+    <Content Include="Tasarım\scss\components\_checkbox-radio.scss" />
+    <Content Include="Tasarım\scss\components\_dropdown.scss" />
+    <Content Include="Tasarım\scss\components\_forms.scss" />
+    <Content Include="Tasarım\scss\components\_icons.scss" />
+    <Content Include="Tasarım\scss\components\_lists.scss" />
+    <Content Include="Tasarım\scss\components\_tables.scss" />
+    <Content Include="Tasarım\scss\components\_todo-list.scss" />
+    <Content Include="Tasarım\scss\landing-screens\_auth.scss" />
+    <Content Include="Tasarım\scss\mixins\.DS_Store" />
+    <Content Include="Tasarım\scss\mixins\_animation.scss" />
+    <Content Include="Tasarım\scss\mixins\_badges.scss" />
+    <Content Include="Tasarım\scss\mixins\_blockqoute.scss" />
+    <Content Include="Tasarım\scss\mixins\_buttons.scss" />
+    <Content Include="Tasarım\scss\mixins\_cards.scss" />
+    <Content Include="Tasarım\scss\mixins\_misc.scss" />
+    <Content Include="Tasarım\scss\style.scss" />
+    <Content Include="Tasarım\scss\_background.scss" />
+    <Content Include="Tasarım\scss\_demo.scss" />
+    <Content Include="Tasarım\scss\_fonts.scss" />
+    <Content Include="Tasarım\scss\_footer.scss" />
+    <Content Include="Tasarım\scss\_functions.scss" />
+    <Content Include="Tasarım\scss\_layouts.scss" />
+    <Content Include="Tasarım\scss\_misc.scss" />
+    <Content Include="Tasarım\scss\_navbar.scss" />
+    <Content Include="Tasarım\scss\_reset.scss" />
+    <Content Include="Tasarım\scss\_sidebar.scss" />
+    <Content Include="Tasarım\scss\_typography.scss" />
+    <Content Include="Tasarım\scss\_utilities.scss" />
+    <Content Include="Tasarım\scss\_variables.scss" />
+    <Content Include="Tasarım\scss\_vertical-wrapper.scss" />
+    <Content Include="Tasarım\vendors\.DS_Store" />
+    <Content Include="Tasarım\vendors\ti-icons\fonts\themify.eot" />
+    <Content Include="Tasarım\vendors\ti-icons\fonts\themify.ttf" />
+    <Content Include="Tasarım\vendors\ti-icons\fonts\themify.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53029</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44349/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

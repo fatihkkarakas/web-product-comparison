@@ -1,0 +1,6 @@
+C:\Users\LENOVO\source\repos\wep.proje\Proje.DataAccess\bin\Debug\Proje.DataAccess.dll
+C:\Users\LENOVO\source\repos\wep.proje\Proje.DataAccess\bin\Debug\Proje.DataAccess.pdb
+C:\Users\LENOVO\source\repos\wep.proje\Proje.DataAccess\obj\Debug\Proje.DataAccess.csprojAssemblyReference.cache
+C:\Users\LENOVO\source\repos\wep.proje\Proje.DataAccess\obj\Debug\Proje.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\wep.proje\Proje.DataAccess\obj\Debug\Proje.DataAccess.dll
+C:\Users\LENOVO\source\repos\wep.proje\Proje.DataAccess\obj\Debug\Proje.DataAccess.pdb
